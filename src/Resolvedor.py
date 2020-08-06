@@ -1,12 +1,12 @@
-import csv, random, time, json, sys  # ;import calendar
+import csv, time, json, sys  # ;import calendar
 # import TPEDD.Excepciones_solver as Excepciones #para Pycharm
-from Excepciones_solver import *
+from src.excepciones.Excepciones_solver import *
 # from TPEDD import Verificador_de_reglas,Generador_sudokus
 from time import sleep as esperar, time;from math import sqrt as raiz_cuadrada
 from colorama import init, Style  # ,Fore
 # from curses import *
-from Generador_sudokus import Generador_Sudokus
-from Verificador_de_reglas import Verificador_reglas
+from src.Generador_sudokus import Generador_Sudokus
+from src.Verificador_de_reglas import Verificador_reglas
 
 init()
 

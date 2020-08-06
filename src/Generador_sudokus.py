@@ -1,8 +1,8 @@
 import csv, random;
 from time import sleep as esperar
 from math import sqrt as raiz_cuadrada
-from Verificador_de_reglas import Verificador_reglas
-from Excepciones_solver import Dimension_incorrecta_exception, Cantidad_tableros_incorrecta_exception
+from src.Verificador_de_reglas import Verificador_reglas
+from src.excepciones.Excepciones_solver import Dimension_incorrecta_exception, Cantidad_tableros_incorrecta_exception
 
 
 class Generador_Sudokus:

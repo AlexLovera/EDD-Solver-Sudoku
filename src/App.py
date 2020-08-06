@@ -1,9 +1,9 @@
-from Excepciones_solver import *;
+from src.excepciones.Excepciones_solver import *;
 from colorama import init, Style
 from time import sleep as esperar
 
 init()
-from Resolvedor import Solucionador_sudokus
+from src.Resolvedor import Solucionador_sudokus
 
 
 def resolver_sudokus():
