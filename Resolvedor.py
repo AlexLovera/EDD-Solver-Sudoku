@@ -41,9 +41,9 @@ class Solucionador_sudokus():
                 num_linea += 1
                 for numero in linea:
                     fila_temporal.append(int(numero))
-                tablero.append(fila_temporal)
+                tablero.append(fila_temporal) # agrega de a filas
                 fila_temporal = list()
-                if num_linea % dimension == 0:
+                if num_linea % dimension == 0: # cuando el tablero este completo, verifica y resuelve?. Hacer test
                     print('\033[1;33m' + f"Sudoku N°:{int(archivo.line_num / dimension)}")
                     print('\033[1;33m' + f"Linea de archivo N°:{archivo.line_num}")
                     # termina de cargar el tablero, y lo resuelve
