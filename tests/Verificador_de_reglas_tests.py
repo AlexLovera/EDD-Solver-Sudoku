@@ -1,6 +1,6 @@
 import unittest
 #from  EDD-Solver-Sudoku.Verificador_de_reglas import *
-from src/Verificador_de_reglas import *
+from src.Verificador_de_reglas import *
 
 ''' va a tener las siguientes funciones iniciales:
 
