@@ -9,25 +9,17 @@ verificar_tamaño_del_tablero(self,tablero,dimension)
 verificar_valores_predeterminados_correctos(self,tablero,dimension)
 
 '''
+tablero_con_ceros = [[0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0],[0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0],[0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0]]
+
 class Verificador_de_reglas_tests(unittest.TestCase):
-    '''tablero_con_ceros = [[0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0],
-               [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0],
-               [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0]]'''
 
     def test_comprobar_que_el_tablero_como_lista_de_lista_tenga_dimension_9(self):
-        tablero_con_ceros = [[0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0],
-                             [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0],
-                             [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0]]
         dimension=len(tablero_con_ceros[0])
         tablero_tiene_dimension_9=True
         self.assertEqual(Verificador_reglas().verificar_tamaño_del_tablero(tablero_con_ceros, dimension),tablero_tiene_dimension_9)
 
     def test_comprobar_que_la_posicion_en_un_tablero_vacio_sea_valida(self):
         ''' Esta vacio el tablero asi que tendria que ser valida la posicion, se espera True '''
-        tablero_con_ceros = [[0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0],
-                             [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0],
-                             [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0]]
-
         dimension=len(tablero_con_ceros[0])
         es_una_posicion_valida_5_5=True
         valor_a_agregar=5
@@ -36,10 +28,6 @@ class Verificador_de_reglas_tests(unittest.TestCase):
 
     def test_comprobar_que_el_tablero_contenga_numeros_0_a_9(self):
         ''' Deberia de devolver true, ya que el tablero solo tendra valores 0. Dimension 9'''
-        tablero_con_ceros = [[0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0],
-                             [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0],
-                             [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0]]
-
         dimension=len(tablero_con_ceros[0])
         valores_del_tablero_son_correctos=True
         self.assertEqual(Verificador_reglas().verificar_valores_predeterminados_correctos(tablero_con_ceros, dimension),valores_del_tablero_son_correctos)
@@ -56,10 +44,6 @@ class Verificador_de_reglas_tests(unittest.TestCase):
 
     def test_comprobar_que_sea_posible_colocar_en_fila_de_una_posicion_especifica_(self):
         ''' Deberia de devolver true ya que esta todo el tablero en 0 y no hay repeticion del valor 4'''
-        tablero_con_ceros = [[0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0],
-                             [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0],
-                             [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0]]
-
         valor_a_agregar = 4  # no puede estar el 4 en esa misma fila
         fila_a_verificar=tablero_con_ceros[0]
         no_hay_valor_repetido_en_fila=True
@@ -78,10 +62,6 @@ class Verificador_de_reglas_tests(unittest.TestCase):
 
     def test_comprobar_que_no_haya_valor_repetido_en_la_columna(self):
         ''' Deberia de devolver true ya que el valor 2 no esta repetido en la columna'''
-        tablero_con_ceros = [[0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0],
-                             [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0],
-                             [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0]]
-
         valor_a_agregar = 2  # no puede estar el 4 en esa misma fila
         columna_a_verificar=1
         dimension=len(tablero_con_ceros[0])
