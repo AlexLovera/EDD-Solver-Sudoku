@@ -35,7 +35,7 @@ class Solucionador_sudokus():
             fila_temporal, tablero = list(), list()
             num_linea = 0
             for linea in archivo:
-                if num_linea_recuperacion is not 0:  # va a saltear las lineas necesarias
+                if num_linea_recuperacion != 0:  # va a saltear las lineas necesarias
                     num_linea_recuperacion -= 1
                     continue
                 num_linea += 1
