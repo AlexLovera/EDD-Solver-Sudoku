@@ -1,6 +1,6 @@
 import unittest
-from  EDD-Solver-Sudoku.src.Verificador_de_reglas import *
-#from src.Verificador_de_reglas import *
+#from  EDD-Solver-Sudoku.src.Verificador_de_reglas import *
+from src.Verificador_de_reglas import *
 
 ''' va a tener las siguientes funciones iniciales:
 
@@ -18,6 +18,7 @@ class Verificador_de_reglas_tests(unittest.TestCase):
         tablero_con_ceros = [[0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0],
                              [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0],
                              [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0]]
+        print("se ejecuto el tesst")
         dimension=len(tablero_con_ceros[0])
         tablero_tiene_dimension_9=True
         self.assertEqual(Verificador_reglas().verificar_tamaño_del_tablero(tablero_con_ceros, dimension),tablero_tiene_dimension_9)
