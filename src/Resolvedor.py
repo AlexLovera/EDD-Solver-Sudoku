@@ -78,7 +78,7 @@ class Solucionador_sudokus():
                         # print("'fallo' provocado")#entra las 10 veces...
                         return False
                 else:
-                    temporal = csv.writer(open("archivos/salida_tableros.csv", "a", newline=""))
+                    temporal = csv.writer(open("../salida_tableros.csv", "a", newline=""))
                     for j in tablero:
                         temporal.writerow(j)
                     self._mostrar_tablero_consola(tablero, dimension)
@@ -138,7 +138,7 @@ class Solucionador_sudokus():
         return None
 
     def _guardar_progreso_json(self, dic_datos, ruta_guardado):
-        with open("archivos/" + ruta_guardado, 'w') as archivo:
+        with open("../" + ruta_guardado, 'w') as archivo:
             json.dump(dic_datos, archivo)
 
     def _recuperar_progreso_con_json(self, ruta):
